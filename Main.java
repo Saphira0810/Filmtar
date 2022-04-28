@@ -22,7 +22,7 @@ public class Main extends Commands{
 				addChoice();
 			}else if(cmd.equals("2")) {
 				SearchMenu();
-				//SearchByMenu(); --> ez majd itt fog kelleni, de majd egy metódust kell hozzá írni
+				searchChoice();
 			}
 			else if(cmd.equals("3")) {
 				DeleteMenu();

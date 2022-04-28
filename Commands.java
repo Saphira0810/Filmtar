@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Scanner;
 
 
+
 public class Commands extends Videoanyagok{
 	/** A metódus bekéri a hozzáadni kívánt film adatait, 
 	 * majd hozzáadja a listához */
@@ -89,6 +90,116 @@ public class Commands extends Videoanyagok{
 			}
 		}
 		
+	}
+	
+	protected static void searchChoice() {
+		Scanner sc = new Scanner(System.in);
+		
+		//SearchMenu();
+		String cmd = sc.nextLine();
+		
+		if (cmd.equals("1")) {
+			searchFilm();
+		}
+		else if (cmd.equals("2")) {
+			searchSorozat();
+		}
+		else if (cmd.equals("3")) {
+			System.out.println("Visszaírányítjuk a fõmenübe \n");
+		}
+		else {
+			//Ide még írunk majd hibakezelõ osztályt de addig is
+			System.err.println("Hibás bemenet , vissza a fõmenübe \n");
+		}
+		
+	}
+	
+	protected static void searchFilm() {
+		Scanner sc = new Scanner(System.in);
+		
+		SearchByMenu();
+		String cmd = sc.nextLine();
+		
+		if (cmd.equals("1")) {
+			System.out.print("Adja meg a keresni kívánt évszámot: ");
+			int e = sc.nextInt();
+			
+			Collections.sort(lista,new NameComparator());
+			
+			for (int i=0;i<lista.size();i++) {
+				if (lista.get(i).getClass().toString().equals("class Filmtar.Filmtar.Film")) {
+					if (lista.get(i).getEv()==e) {
+						System.out.println(lista.get(i));
+					}
+				}
+			}
+		}
+		else if (cmd.equals("2")) {
+			System.out.print("Adja meg a keresni kívánt mûfajt: ");
+			String m = sc.nextLine();
+			
+			Collections.sort(lista,new NameComparator());
+			
+			for (int i=0;i<lista.size();i++) {
+				if (lista.get(i).getClass().toString().equals("class Filmtar.Filmtar.Film")) {
+					if (lista.get(i).getMufaj().equals(m)) {
+						System.out.println(lista.get(i));
+					}
+				}
+			}
+		}
+		else if (cmd.equals("3")) {
+			System.out.println("Visszaírányítjuk a fõmenübe \n");
+		}
+		else {
+			//Ide még írunk majd hibakezelõ osztályt de addig is
+			System.err.println("Hibás bemenet , vissza a fõmenübe");
+		}
+		
+	}
+	
+	protected static void searchSorozat() {
+		Scanner sc = new Scanner(System.in);
+		
+		SearchByMenu();
+		String cmd = sc.nextLine();
+		
+		if (cmd.equals("1")) {
+			System.out.print("Adja meg a keresni kívánt évszámot: ");
+			int e = sc.nextInt();
+			
+			Collections.sort(lista,new NameComparator());
+			
+			for (int i=0;i<lista.size();i++) {
+				if (lista.get(i).getClass().toString().equals("class Filmtar.Filmtar.Sorozat")) {
+					if (lista.get(i).getEv()==e) {
+						System.out.println(lista.get(i));
+					}
+				}
+			}
+		}
+		else if (cmd.equals("2")) {
+			System.out.print("Adja meg a keresni kívánt mûfajt: ");
+			String m = sc.nextLine();
+			
+			Collections.sort(lista,new NameComparator());
+			
+			for (int i=0;i<lista.size();i++) {
+				if (lista.get(i).getClass().toString().equals("class Filmtar.Filmtar.Sorozat")) {
+					if (lista.get(i).getMufaj().equals(m)) {
+						System.out.println(lista.get(i));
+					}
+				}
+			}
+		}
+		else if (cmd.equals("3")) {
+			System.out.println("Visszaírányítjuk a fõmenübe \n");
+		}
+		else {
+			//Ide még írunk majd hibakezelõ osztályt de addig is
+			System.err.println("Hibás bemenet , vissza a fõmenübe");
+		}
+
 	}
 	
 }

@@ -24,7 +24,7 @@ public class Menu {
 	protected static void SearchByMenu() {
 		System.out.println("[1] Év szerinti keresés \n"
 				+ "[2] Mûfaj szerinti keresés \n"
-				+ "[3] Vissza\n");
+				+ "[3] Vissza a fõmenübe\n");
 	}
 	protected static void DeleteMenu() {
 		System.out.println("[1] Film törlése \n"
