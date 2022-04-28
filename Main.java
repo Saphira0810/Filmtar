@@ -1,5 +1,6 @@
 package Filmtar.Filmtar;
 
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main extends Commands{
@@ -10,6 +11,7 @@ public class Main extends Commands{
 		//Videoanyagok v1= new Videoanyagok();
 		beolvas();
 
+		//Collections.sort(lista,new YearComparator());  //késõbb használom az év szerinti listázáshoz :) 
 		
 		while (true) {
 			Fomenu();
