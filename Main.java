@@ -11,7 +11,7 @@ public class Main extends Commands{
 		//Videoanyagok v1= new Videoanyagok();
 		beolvas();
 
-		//Collections.sort(lista,new YearComparator());  //késõbb használom az év szerinti listázáshoz :) 
+		Collections.sort(lista,new YearComparator());  //késõbb használom az év szerinti listázáshoz :) 
 		
 		while (true) {
 			Fomenu();
@@ -22,11 +22,12 @@ public class Main extends Commands{
 				addChoice();
 			}else if(cmd.equals("2")) {
 				SearchMenu();
+				//SearchByMenu(); --> ez majd itt fog kelleni, de majd egy metódust kell hozzá írni
 			}
 			else if(cmd.equals("3")) {
 				DeleteMenu();
 			}else if(cmd.equals("4")) {
-				SearchByMenu();
+				searchByName();
 			}else if(cmd.equals("5")) {
 				Fajlbair();
 				break;

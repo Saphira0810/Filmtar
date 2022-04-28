@@ -1,6 +1,7 @@
 package Filmtar.Filmtar;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 
@@ -73,4 +74,21 @@ public class Commands extends Videoanyagok{
 		}
 		
 	}
+	
+	protected static void searchByName() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Adja meg a keresni kívánt címet: ");
+		String n = sc.nextLine();
+		
+		Collections.sort(lista, new NameComparator());
+		
+		for (int i=0; i<lista.size();i++) {
+			if (lista.get(i).getCim().contains(n)) {
+				System.out.println(lista.get(i));
+			}
+		}
+		
+	}
+	
 }
