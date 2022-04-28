@@ -12,7 +12,14 @@ abstract class Videoanyag {
 	public String getCim() {return cim;}
 	public int getEv() {return ev;}
 	public String getMufaj() {return mufaj;}
+	
+	public void setCim(String c){cim=c;}
+	public void setEv(int e) {ev=e;}
+	public void setMufaj(String m) {mufaj=m;}
+	
 	abstract public String toFajlba();
+	
+	
 
 	/*
 	 * Amikor késõbb létrehozod a Sorozatban is a toFajlba töröld itt a return-t 

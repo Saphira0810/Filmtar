@@ -10,6 +10,8 @@ public class Sorozat extends Videoanyag {
 	
 	public int getReszek() {return reszek;}
 	
+	public void setReszek(int r) {reszek=r;}
+	
 	public String toString() {
 		return super.getCim()+"\t"+super.getMufaj()+"\t"+super.getEv()+"\t"+this.reszek;
 	}

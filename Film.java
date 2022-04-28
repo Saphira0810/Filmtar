@@ -15,6 +15,10 @@ public class Film extends Videoanyag {
 	public int getKorh() {return korhatar;}
 	public String getLeiras() {return leiras;}
 	
+	public void setHossz(int h) {hossz=h;}
+	public void setKorh(int k) {korhatar=k;}
+	public void setLeiras(String l) {leiras=l;}
+	
 	public String toString() {
 		return super.getCim()+"\t"+super.getMufaj()+"\t"+super.getEv()+"\t"+this.hossz+"\t"+this.korhatar+"\t"+this.leiras;
 	}

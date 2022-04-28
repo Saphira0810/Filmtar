@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
-import java.util.ArrayList;
+
 
 public class Videoanyagok extends Menu {
 
@@ -53,7 +53,7 @@ public class Videoanyagok extends Menu {
 			
 			for (int i=0;i<lista.size();i++) {
 				
-				System.out.println(lista.get(i).getClass().toString());
+				//System.out.println(lista.get(i).getClass().toString());
 				if (lista.get(i).getClass().toString().equals("class Filmtar.Film")) {
 					w.write(lista.get(i).toFajlba());
 					
