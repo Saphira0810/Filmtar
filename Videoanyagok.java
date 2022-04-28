@@ -50,22 +50,19 @@ public class Videoanyagok extends Menu {
 			FileWriter w=
 			  new FileWriter(new File("adatbazis.txt"), StandardCharsets.UTF_8);
 
-			String s;
 			
-			s="";
 			for (int i=0;i<lista.size();i++) {
 				
 				System.out.println(lista.get(i).getClass().toString());
 				if (lista.get(i).getClass().toString().equals("class Filmtar.Film")) {
-					s+=lista.get(i).toFajlba();
+					w.write(lista.get(i).toFajlba());
 					
 				}else {
-					s+=lista.get(i).toFajlba();
+					w.write(lista.get(i).toFajlba());
 				}
 				
 			}
-			System.out.println(s);
-			w.write(s);
+
 			w.close();
 			
 			
