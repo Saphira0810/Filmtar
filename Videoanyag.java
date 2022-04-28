@@ -13,7 +13,7 @@ abstract class Videoanyag {
 	public int getEv() {return ev;}
 	public String getMufaj() {return mufaj;}
 	abstract public String toFajlba();
-	
+
 	/*
 	 * Amikor késõbb létrehozod a Sorozatban is a toFajlba töröld itt a return-t 
 	 * és állítsd át abstractra ezt
