@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class Main extends Commands{
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		Scanner input=new Scanner(System.in);
 		
 		
@@ -26,6 +26,7 @@ public class Main extends Commands{
 			}
 			else if(cmd.equals("3")) {
 				DeleteMenu();
+				removeByTitle();
 			}else if(cmd.equals("4")) {
 				searchByName();
 			}else if(cmd.equals("5")) {

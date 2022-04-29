@@ -209,4 +209,41 @@ public class Commands extends Videoanyagok{
 
 	}
 	
+	protected static void removeByTitle() throws Exception {
+		Scanner sc = new Scanner(System.in);
+		int cnt=0;
+		
+		System.out.print("Adja meg a törölni kívánt mû címét: ");
+		String t = sc.nextLine();
+		
+		for (int i=0;i<lista.size();i++) {
+			if (lista.get(i).getCim().contains(t)) {
+				System.out.println(lista.get(i));
+				cnt++;
+			}
+		}
+		int n;
+		if (cnt==0) {
+			System.err.println("Hiba, ilyen cím nem található!");
+		}
+		
+		else if(cnt>0) {
+			System.out.print("Adja meg a törölni kívánt mû sorszámát: ");
+			try {
+				 n = sc.nextInt();
+			
+				
+			}catch(Exception e){
+				throw new Exception(); //Ez késõbb másmilyen Exception lesz majdcsak most ne hisztizzen neked
+			}
+			if (n<0 & n>lista.size()) {
+				lista.remove(lista.get(n-1));
+			}
+			
+			
+		}
+		
+	}
+	
+	
 }
