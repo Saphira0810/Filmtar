@@ -218,7 +218,7 @@ public class Commands extends Videoanyagok{
 		
 		for (int i=0;i<lista.size();i++) {
 			if (lista.get(i).getCim().contains(t)) {
-				System.out.println(lista.get(i));
+				System.out.println(i+" "+lista.get(i));
 				cnt++;
 			}
 		}
@@ -227,20 +227,21 @@ public class Commands extends Videoanyagok{
 			System.err.println("Hiba, ilyen cím nem található!");
 		}
 		
-		else if(cnt>0) {
+		else{
 			System.out.print("Adja meg a törölni kívánt mû sorszámát: ");
 			try {
-				 n = sc.nextInt();
-			
+				 n = sc.nextInt();			
 				
 			}catch(Exception e){
+				//System.err.println("Hibaágra futottam ");
 				throw new Exception(); //Ez késõbb másmilyen Exception lesz majdcsak most ne hisztizzen neked
 			}
-			if (n<0 & n>lista.size()) {
-				lista.remove(lista.get(n-1));
+			
+			if (n<0 | n<lista.size()) {
+				
+				lista.remove(lista.get(n));
+				System.out.println("Sikeres törlés");
 			}
-			
-			
 		}
 		
 	}
