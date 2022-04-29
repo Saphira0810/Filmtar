@@ -76,6 +76,7 @@ public class Commands extends Videoanyagok{
 		
 	}
 	
+	/**Ez a metódus végzi a cím szerinti keresést */
 	protected static void searchByName() {
 		Scanner sc = new Scanner(System.in);
 		
@@ -92,6 +93,8 @@ public class Commands extends Videoanyagok{
 		
 	}
 	
+	/** Az év/mûfaj alapján való keresés használatakor ez a metódus teszi lehetõvé,
+	 * hogy a felhasználó eldöntse, hogy filmet vagy sorozatot akar keresni. */
 	protected static void searchChoice() {
 		Scanner sc = new Scanner(System.in);
 		
@@ -114,6 +117,8 @@ public class Commands extends Videoanyagok{
 		
 	}
 	
+	/**Az év/mûfaj szerinti keresést végzõ metódus, abban az esetben, ha a felhasználó 
+	 * filmet szeretne keresni. */
 	protected static void searchFilm() {
 		Scanner sc = new Scanner(System.in);
 		
@@ -158,6 +163,8 @@ public class Commands extends Videoanyagok{
 		
 	}
 	
+	/**Az év/mûfaj szerinti keresést végzõ metódus, abban az esetben, ha a felhasználó 
+	 * sorozatot szeretne keresni. */
 	protected static void searchSorozat() {
 		Scanner sc = new Scanner(System.in);
 		
